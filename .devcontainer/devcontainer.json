@@ -4,13 +4,7 @@
 		"dockerfile": "Dockerfile"
 	},
 	"workspaceMount": "source=${localWorkspaceFolder}/,target=/home/vscode/workspace,type=bind",
-	"workspaceFolder": "/home/vscode/workspace", 
-	"extensions": [
-		"rust-lang.rust-analyzer",
-        "vadimcn.vscode-lldb",
-        "bungcip.better-toml",
-        "serayuzgur.crates"
-	],
+	"workspaceFolder": "/home/vscode/workspace",
 	"forwardPorts": [8085],
 	"overrideCommand": false,
 	"containerEnv": {
@@ -23,7 +17,7 @@
 	"runArgs": [
 		"--privileged",
 		"--disable-content-trust=true",
-		"-e", 
+		"-e",
 		"EXTRA=\"-display none\"",
 		"-e",
 		"PULSE_COOKIE=/tmp/pulse/cookie",
@@ -33,7 +27,7 @@
 		"/run/user/1000/pulse/native:/tmp/pulse/native",
 		"-v",
 		"/home/vscode/.config/pulse/cookie:/tmp/pulse/cookie:ro",
-		
+
 		// "--device",
 		// "/dev/dri:/dev/dri",
 		// "--device",
