@@ -1,4 +1,4 @@
-pub fn fizz_buzz() {
+fn main() {
     for i in 0..=30 {
         if i % 3 == 0 && i % 5 == 0 {
             println!("FizzBuzz");
