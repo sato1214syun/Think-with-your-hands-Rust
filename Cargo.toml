@@ -8,3 +8,7 @@ edition = "2021"
 [dependencies]
 regex = "1.10.4"
 rand = "0.8.5"
+
+[[bin]]
+name = "seireki_wareki"
+path = "src/ch1/seireki_wareki.rs"

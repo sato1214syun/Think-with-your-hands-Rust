@@ -15,10 +15,8 @@ fn main() {
         }
 
         // 各和暦が1年の場合は「元年」に変換
-        let re = Regex::new(r"^\D*1年$").unwrap();
-        match re.find(&wareki) {
-            Some(_i) => println!("西暦:{} = {}", y, wareki.replace("1年", "元年")),
-            None => println!("西暦:{} = {}", y, wareki),
-        }
+        let re = Regex::new(r"^(\D*)1年$").unwrap();
+        let result = re.replace_all(&wareki, "$1元年");
+        println!("西暦:{} = {}", y, result);
     }
 }
