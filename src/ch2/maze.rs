@@ -15,9 +15,10 @@ fn main() {
         maze[MAP_N - 1][i] = 1;
     }
     // 2マスに1つ壁を配置する
-    for y in 2..MAP_N - 2 {
-        for x in 2..MAP_N - 2 {
-            if x % 2 == 1 || y % 2 == 1 {
+    let pitch = 2;
+    for y in pitch..MAP_N - pitch {
+        for x in pitch..MAP_N - pitch {
+            if x % pitch != 0 || y % pitch != 0 {
                 continue;
             }
             maze[y][x] = 1; // 壁にする
