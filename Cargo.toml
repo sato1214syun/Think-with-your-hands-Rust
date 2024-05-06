@@ -9,6 +9,19 @@ edition = "2021"
 regex = "1.10.4"
 rand = "0.8.5"
 
+# ch1のプログラム実行用の設定. cargo run --bin <name>で実行できる
+[[bin]]
+name = "fizzbuzz"
+path = "src/ch1/fizzbuzz.rs"
+[[bin]]
+name = "kuku"
+path = "src/ch1/kuku.rs"
+[[bin]]
+name = "kuku2"
+path = "src/ch1/kuku2.rs"
+[[bin]]
+name = "fib"
+path = "src/ch1/fib.rs"
 [[bin]]
 name = "seireki_wareki"
 path = "src/ch1/seireki_wareki.rs"
