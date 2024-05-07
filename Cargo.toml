@@ -43,3 +43,27 @@ path = "src/ch2/bmi.rs"
 [[bin]]
 name = "input_height"
 path = "src/ch2/input_height.rs"
+[[bin]]
+name = "counter"
+path = "src/ch2/counter.rs"
+[[bin]]
+name = "tukimei"
+path = "src/ch2/tukimei.rs"
+[[bin]]
+name = "sum_args"
+path = "src/ch2/sum_args.rs"
+[[bin]]
+name = "read_file"
+path = "src/ch2/read_file.rs"
+[[bin]]
+name = "sum_textfile"
+path = "src/ch2/sum_textfile.rs"
+# [[bin]]
+# name = "tukimei"
+# path = "src/ch2/tukimei.rs"
+# [[bin]]
+# name = "tukimei"
+# path = "src/ch2/tukimei.rs"
+# [[bin]]
+# name = "tukimei"
+# path = "src/ch2/tukimei.rs"

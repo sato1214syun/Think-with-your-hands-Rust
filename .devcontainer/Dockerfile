@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
     git unzip dosfstools curl wget vim sudo ssh tzdata ca-certificates \
     xauth uuid-dev \
     dbus dbus-x11 alsa-utils pulseaudio pulseaudio-utils mesa-utils x11-apps \
-    cmake clang clang-format clangd gdb nasm lldb\ 
+    cmake clang clang-format clangd gdb nasm lldb\
     python3 python-is-python3 python3-distutils python3-numpy python3-pip python3-tk \
     # nodejs \
     # libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-net-dev libsdl2-ttf-dev \
@@ -62,6 +62,8 @@ RUN rustup install nightly
 RUN rustup component add rust-analysis rust-src rustfmt clippy
 RUN cargo install cargo-watch
 RUN cargo install cargo-check
+# Install FireDBG
+# RUN curl https://raw.githubusercontent.com/SeaQL/FireDBG.for.Rust/main/install.sh -sSf | sh
 
 RUN mkdir -p /home/${USERNAME}/workspace
 WORKDIR /home/${USERNAME}/workspace
