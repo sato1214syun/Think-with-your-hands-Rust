@@ -58,12 +58,15 @@ path = "src/ch2/read_file.rs"
 [[bin]]
 name = "sum_textfile"
 path = "src/ch2/sum_textfile.rs"
-# [[bin]]
-# name = "tukimei"
-# path = "src/ch2/tukimei.rs"
-# [[bin]]
-# name = "tukimei"
-# path = "src/ch2/tukimei.rs"
-# [[bin]]
-# name = "tukimei"
-# path = "src/ch2/tukimei.rs"
+[[bin]]
+name = "cmptext"
+path = "src/ch2/cmptext.rs"
+[[bin]]
+name = "jisyo"
+path = "src/ch2/jisyo.rs"
+[[bin]]
+name = "fizzbuzz_file"
+path = "src/ch2/fizzbuzz_file.rs"
+[[bin]]
+name = "fizzbuzz_file2"
+path = "src/ch2/fizzbuzz_file2.rs"
