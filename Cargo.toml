@@ -70,3 +70,12 @@ path = "src/ch2/fizzbuzz_file.rs"
 [[bin]]
 name = "fizzbuzz_file2"
 path = "src/ch2/fizzbuzz_file2.rs"
+[[bin]]
+name = "rec_fib"
+path = "src/ch2/rec_fib.rs"
+[[bin]]
+name = "findfile"
+path = "src/ch2/findfile.rs"
+[[bin]]
+name = "mytree"
+path = "src/ch2/mytree.rs"
