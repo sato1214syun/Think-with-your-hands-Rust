@@ -9,6 +9,8 @@ edition = "2021"
 regex = "1.10.4"
 rand = "0.8.5"
 num-bigint = "0.4.4"
+unicode-segmentation = "1.10.1"
+encoding_rs = "0.8.34"
 
 # ch1のプログラム実行用の設定. cargo run --bin <name>で実行できる
 [[bin]]
@@ -79,3 +81,52 @@ path = "src/ch2/findfile.rs"
 [[bin]]
 name = "mytree"
 path = "src/ch2/mytree.rs"
+
+# ch3
+[[bin]]
+name = "str_hex"
+path = "src/ch3/str_hex.rs"
+[[bin]]
+name = "str_slice"
+path = "src/ch3/str_slice.rs"
+[[bin]]
+name = "str_substr"
+path = "src/ch3/str_substr.rs"
+[[bin]]
+name = "str_substr2"
+path = "src/ch3/str_substr2.rs"
+[[bin]]
+name = "str_find"
+path = "src/ch3/str_find.rs"
+[[bin]]
+name = "enc_save_load"
+path = "src/ch3/enc_save_load.rs"
+[[bin]]
+name = "globalvars"
+path = "src/ch3/globalvars.rs"
+[[bin]]
+name = "lib"
+path = "src/ch3/lib.rs"
+
+# ch4
+[[bin]]
+name = "sec01"
+path = "src/ch4/sec01.rs"
+[[bin]]
+name = "sec02"
+path = "src/ch4/sec02.rs"
+[[bin]]
+name = "sec03"
+path = "src/ch4/sec03.rs"
+[[bin]]
+name = "sec04"
+path = "src/ch4/sec04.rs"
+[[bin]]
+name = "sec05"
+path = "src/ch4/sec05.rs"
+[[bin]]
+name = "sec06"
+path = "src/ch4/sec06.rs"
+[[bin]]
+name = "sec07"
+path = "src/ch4/sec07.rs"
