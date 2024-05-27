@@ -11,6 +11,7 @@ rand = "0.8.5"
 num-bigint = "0.4.4"
 unicode-segmentation = "1.10.1"
 encoding_rs = "0.8.34"
+image = "0.25.1"
 
 # ch1のプログラム実行用の設定. cargo run --bin <name>で実行できる
 [[bin]]
@@ -110,23 +111,28 @@ path = "src/ch3/lib.rs"
 
 # ch4
 [[bin]]
-name = "sec01"
+name = "ch4_sec01"
 path = "src/ch4/sec01.rs"
 [[bin]]
-name = "sec02"
+name = "ch4_sec02"
 path = "src/ch4/sec02.rs"
 [[bin]]
-name = "sec03"
+name = "ch4_sec03"
 path = "src/ch4/sec03.rs"
 [[bin]]
-name = "sec04"
+name = "ch4_sec04"
 path = "src/ch4/sec04.rs"
 [[bin]]
-name = "sec05"
+name = "ch4_sec05"
 path = "src/ch4/sec05.rs"
 [[bin]]
-name = "sec06"
+name = "ch4_sec06"
 path = "src/ch4/sec06.rs"
 [[bin]]
-name = "sec07"
+name = "ch4_sec07"
 path = "src/ch4/sec07.rs"
+
+# ch5
+[[bin]]
+name = "ch5_sec01"
+path = "src/ch5/sec01.rs"
