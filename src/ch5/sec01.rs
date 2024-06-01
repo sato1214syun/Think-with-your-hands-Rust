@@ -25,7 +25,7 @@ fn image_ichimatu_main() {
     // クロージャを指定してImageBufferを生成
     let img = image::ImageBuffer::from_fn(512, 512, draw);
     // ファイルへ保存
-    img.save("./src/ch5/ichimatu.png").unwrap();
+    img.save("./src/ch5/sec01_result/ichimatu.png").unwrap();
 }
 
 // 画像の正方形サムネイルを作成
@@ -44,7 +44,7 @@ fn image_thumb_main() {
     }
     // 入力ファイルと出力ファイルを指定
     let input_file = String::from(&args[0]);
-    let output_file = format!("./src/ch5/{}-thumb.png", input_file.split("/").last().unwrap());
+    let output_file = format!("./src/ch5/sec01_result/{}-thumb.png", input_file.split("/").last().unwrap());
     println!("input: {}", input_file);
     println!("output: {}", output_file);
     // 画像ファイルを読み込む
@@ -75,7 +75,7 @@ fn image_filter_main() {
     }
     // 入力ファイルと出力ファイルを指定
     let input_file = String::from(&args[0]);
-    let output_file = format!("./src/ch5/{}-filter.png", input_file.split("/").last().unwrap());
+    let output_file = format!("./src/ch5/sec01_result/{}-filter.png", input_file.split("/").last().unwrap());
     println!("input: {}", input_file);
     println!("output: {}", output_file);
     // 画像ファイルを読み込む
