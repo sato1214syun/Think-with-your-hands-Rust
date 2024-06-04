@@ -13,6 +13,11 @@ unicode-segmentation = "1.10.1"
 encoding_rs = "0.8.34"
 image = "0.25.1"
 hound = "3.5.1"
+actix-web = "4.6.0"
+serde = { version = "1.0", features = ["derive"] }
+tide = "0.16.0"
+async-std = {version = "1.12.0", features=["attributes"]}
+peg = "0.8"
 
 # ch1のプログラム実行用の設定. cargo run --bin <name>で実行できる
 [[bin]]
@@ -146,3 +151,26 @@ path = "src/ch5/sec03.rs"
 [[bin]]
 name = "ch5_sec04"
 path = "src/ch5/sec04.rs"
+[[bin]]
+name = "ch5_sec06"
+path = "src/ch5/sec06.rs"
+
+# ch6
+[[bin]]
+name = "ch6_sec01"
+path = "src/ch6/sec01.rs"
+[[bin]]
+name = "ch6_sec02"
+path = "src/ch6/sec02.rs"
+[[bin]]
+name = "ch6_sec03"
+path = "src/ch6/sec03.rs"
+[[bin]]
+name = "ch6_sec04"
+path = "src/ch6/sec04.rs"
+[[bin]]
+name = "ch6_sec05"
+path = "src/ch6/sec05.rs"
+[[bin]]
+name = "ch6_sec06"
+path = "src/ch6/sec06.rs"
