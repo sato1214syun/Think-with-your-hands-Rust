@@ -19,7 +19,8 @@ peg::parser!( pub grammar tomato() for str {
     // print文の定義 --- (*5)
     rule print() -> Node
         // 'print "abc"'の形式で文字列を出力する
-        // $([^ '"']*は、^が否定なので、"以外の文字の繰り返しを表す
+        // [^ '"']*は、^が否定なので、"以外の文字の繰り返しを表す
+        // _は空白文字を表す
         = "print" _ "\"" v:$([^ '"']*) "\""
         { Node::PrintStr(v.to_string()) }
         // 'print 数式'の形式で数値を出力する
