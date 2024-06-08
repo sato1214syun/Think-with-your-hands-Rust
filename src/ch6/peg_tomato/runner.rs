@@ -4,58 +4,62 @@ use std::collections::HashMap;
 
 // プログラム全体で使うコンテキストを定義 --- (*1)
 struct Context {
-    // 変数と値を保持
+    // 変数とその値をHashで保持する
     vars: HashMap<String, i64>,
 }
 
 // 構文木を一つ実行する --- (*2)
-fn run_node(ctx: &mut Context, node: Node) -> i64 {
-    // どのタイプのノードかを判定
+// Contextを与えることで、変数の操作を可能にしている
+// 戻り値はかならずi64
+fn run_node(context: &mut Context, node: Node) -> i64 {
+    // matchでどのタイプのノードかを判定
     match node {
-        Node::Number(v) => v, // 数値を返す
+        // 数値を返す
+        Node::Number(v) => v,
+        // 計算式を計算する --- (*3)
         Node::Calc(op, l, r) => {
-            // 計算式 --- (*3)
-            calc_op(op, run_node(ctx, *l), run_node(ctx, *r))
+            calc_op(op, run_node(context, *l), run_node(context, *r))
         }
+        // 変数の値を得る --- (*4)
         Node::GetVar(name) => {
-            // 変数の値を得る --- (*4)
-            match ctx.vars.get(&name) {
+            match context.vars.get(&name) {
                 Some(v) => *v,
                 None => 0,
             }
         }
+        // 変数の代入
         Node::SetVar(name, node) => {
-            // 変数の代入
-            let val = run_node(ctx, *node);
-            ctx.vars.insert(name, val);
+            let val = run_node(context, *node);
+            context.vars.insert(name, val);
             val
         }
+        // if文 --- (*5)
         Node::If(cond, true_n, false_n) => {
-            // if文 --- (*5)
-            let cond_v = run_node(ctx, *cond);
+            let cond_v = run_node(context, *cond);
             if cond_v > 0 {
-                run_nodes(ctx, &*true_n)
+                run_nodes(context, &*true_n)
             } else {
-                run_nodes(ctx, &*false_n)
+                run_nodes(context, &*false_n)
             }
         }
+        // for文 --- (*6)
         Node::For(name, start, end, body) => {
-            // for文 --- (*6)
             let mut r = 0;
             let nodes = *body;
             for i in start..=end {
-                ctx.vars.insert(name.clone(), i);
-                r = run_nodes(ctx, &nodes);
+                context.vars.insert(name.clone(), i);
+                r = run_nodes(context, &nodes);
             }
             r
         }
+        // 文字列のprint--- (*7)
         Node::PrintStr(v) => {
             println!("{}", v);
             0
-        } // --- (*7)
+        }
+        // 数字のprint文 --- (*8)
         Node::Print(node) => {
-            // print文 --- (*8)
-            let v = run_node(ctx, *node);
+            let v = run_node(context, *node);
             println!("{}", v);
             v
         }
