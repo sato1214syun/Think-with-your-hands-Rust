@@ -42,7 +42,6 @@ peg::parser!( pub grammar tomato() for str {
         { Node::if_(comparison, t, vec![]) }
     rule block() -> Vec<Node>
         = "{" _ v:sentences() _ "}" _ { v }
-
     // for文の定義 --- (*7)
     rule for() -> Node
         = "for" _ w:word() _ "=" _ start:number() _
@@ -83,7 +82,7 @@ peg::parser!( pub grammar tomato() for str {
         = v:$(['a'..='z'|'A'..='Z'|'_']+ ['0'..='9']*)
         { String::from(v) }
 
-    rule end_of_line() = [';' | '\n']+ _ // 文の区切り
-    rule lf() = _ ['\n']* _ // 改行
+    rule end_of_line() = [';' | '\r'| '\n']+ _ // 文の区切り
+    rule lf() = _ ['\r' | '\n']* _ // 改行
     rule _ = [' ' | '\t']* // 空白文字
 });

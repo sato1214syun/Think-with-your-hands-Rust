@@ -125,7 +125,11 @@ fn run_nodes(ctx: &mut Context, nodes: &Vec<Node>) -> i64 {
 }
 // 手軽にプログラムを実行する関数 --- (*11)
 pub fn run(src: &str) -> i64 {
-    let nodes = tomato::parse(src).unwrap();
+    let nodes;
+    match tomato::parse(src) {
+        Ok(v) => nodes = v,
+        Err(err) => panic!("panic: \n{}", err),
+    };
     let mut ctx = Context {
         vars: HashMap::new(),
     };

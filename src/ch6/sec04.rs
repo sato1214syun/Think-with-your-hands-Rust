@@ -116,9 +116,9 @@ fn peg_tomato_main() {
     }
     // ファイルを開く
     // let filename = &args[1];
-    let filename = "./sample-src/ch6/peg_tomato/sum1to10.tomato";
+    // let filename = "./sample-src/ch6/peg_tomato/sum1to10.tomato";
     // let filename = "./sample-src/ch6/peg_tomato/fib.tomato";
-    // let filename = "./sample-src/ch6/peg_tomato/fizbuzz.tomato";
+    let filename = "./sample-src/ch6/peg_tomato/fizzbuzz.tomato";
     let src = fs::read_to_string(filename).unwrap();
     runner::run(&src);
 }
