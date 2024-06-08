@@ -18,6 +18,10 @@ serde = { version = "1.0", features = ["derive"] }
 tide = "0.16.0"
 async-std = {version = "1.12.0", features=["attributes"]}
 peg = "0.8"
+libc = "0.2"
+
+[build-dependencies]
+cc = "1.0"
 
 # ch1のプログラム実行用の設定. cargo run --bin <name>で実行できる
 [[bin]]
