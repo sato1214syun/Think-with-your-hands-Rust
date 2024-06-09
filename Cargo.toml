@@ -19,6 +19,10 @@ tide = "0.16.0"
 async-std = {version = "1.12.0", features=["attributes"]}
 peg = "0.8"
 libc = "0.2"
+tokio = { version = "1", features = ["full"] }
+reqwest = "0.12"
+scraper = "0.19"
+urlencoding = "2.1"
 
 [build-dependencies]
 cc = "1.0"
@@ -178,3 +182,6 @@ path = "src/ch6/sec05.rs"
 [[bin]]
 name = "ch6_sec06"
 path = "src/ch6/sec06.rs"
+[[bin]]
+name = "ch6_sec07"
+path = "src/ch6/sec07.rs"
